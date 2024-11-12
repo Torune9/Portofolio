@@ -1,0 +1,132 @@
+#projects > h1 {
+  font-size: 30px;
+  font-family: var(--onest);
+  font-weight: 900;
+  text-align: center;
+}
+
+#projects .container-project {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  justify-content: center;
+}
+
+.wrapper-project {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  background-image: linear-gradient(
+    rgba(255, 255, 255, 0.5),
+    rgba(32, 3, 248, 0.5)
+  );
+  padding: 20px;
+  border-radius: 20px;
+  box-sizing: border-box;
+  max-width: 500px;
+}
+
+#projects > div > div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  div:nth-child(2) {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    h1 {
+      font-size: 22px;
+      width: 100%;
+      font-weight: 800;
+      text-transform: capitalize;
+      font-family: var(--onest);
+    }
+    h2 {
+      font-size: 18px;
+      width: 150px;
+      text-align: center;
+      font-weight: 800;
+      text-transform: lowercase;
+      font-family: var(--onest);
+    }
+  }
+
+  p {
+    text-align: justify;
+    line-height: 1.6;
+    font-family: var(--onest);
+    font-size: 0.88em;
+    width: 100%;
+  }
+
+  div:last-child {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    width: 100%;
+    overflow: hidden;
+  }
+  div:last-child img {
+    border-radius: 20px;
+  }
+}
+
+.project-overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  opacity: 0;
+  top: 0;
+  left: 0;
+  transition: opacity 0.5s ease;
+  overflow: hidden;
+}
+
+#projects > div > div > div:first-child {
+  ul {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    li {
+      transform: scaleY(0);
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      font-size: 24px;
+      font-family: var(--onest);
+      font-weight: 800;
+      color: rgba(255, 255, 255, 0.5);
+      transition: transform 0.5s ease;
+      border-bottom: solid 1px rgba(255, 255, 255, 0.5);
+      align-items: center;
+      transform-origin: top;
+    }
+  }
+}
+
+#projects > div > div > div:first-child:hover {
+  opacity: 100%;
+  li {
+    transform: scaleY(100%);
+  }
+}
+
+@media only screen and (min-width: 500px) {
+  #projects > div > div {
+    p {
+      max-width: 500px;
+    }
+
+    div:last-child {
+      max-width: 500px;
+    }
+  }
+}
