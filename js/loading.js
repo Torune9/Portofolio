@@ -64,26 +64,7 @@ const total = setInterval(() => {
 
 },27);
 
-let circle;
 
-const ballons = setInterval(() => {
-    const randomSize = Math.round(Math.random() * 100 + 20);
-    const circle = document.createElement("div");
-  
-    // Menambahkan class dan atribut
-    circle.classList.add("circle-up");
-    circle.style.cssText = `
-      width: ${randomSize}px;
-      height: ${randomSize}px;
-      left: ${Math.round(Math.random() * 100)}%;
-      background-color: #${Math.floor(Math.random() * 16777215).toString(16).padStart(6, '0')};
-    `;
-  
-    // Menghapus elemen setelah animasi selesai
-    circle.addEventListener('animationend', () => circle.remove());
-  
-    loading.appendChild(circle);
-  }, 100);
   
 
 

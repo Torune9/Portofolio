@@ -1,9 +1,15 @@
 #certified h1 {
     text-align: center;
     font-size: 30px;
+    font-weight: 900;
 }
 
-.certified-container{
+#certified h1.h1-certified{
+    font-size: 1em;
+}
+
+
+.certified-container {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -12,24 +18,88 @@
     width: 100%;
     padding: 20px;
 }
-.certified-img {
+
+.certified-wrapper {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column;
     gap: 20px;
     width: 100%;
 }
-.certified-img img{
-    transform: rotate(5deg);
-    transition: transform .5s ease;
-    filter: drop-shadow(10px 10px 5px);
-}
-.certified-img:hover img{
-    transform: rotate(0deg);
-} 
 
-@media only screen and (min-width:500px){
-    .certified-img img{
-        max-width: 500px;
-    }
+.certified-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.certified-element {
+    border-radius: 5px;
+    min-height: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 10px;
+    position: relative;
+    background-image: linear-gradient(to right, var(--warm), var(--deep), rgba(255, 255, 255, 0.1));
+    overflow: hidden;
+    position: relative;
+    color: var(--milk-white);
+    box-sizing: border-box;
+}
+
+.certified-img {
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 60%;
+    height: 100%;
+    z-index: -1;
+    transition: transform .5s ease;
+}
+
+#c-element h2 {
+    font-size: 1.2em;
+    color: beige;
+}
+
+#c-element h3 {
+    font-size: 1em;
+    color: rgb(194, 232, 232);
+    font-weight: normal;
+}
+
+#c-element h4 {
+    font-size: .8em;
+    font-weight: normal;
+    color: beige;
+}
+
+#img{
+    width:0;
+    overflow: hidden;
+    transition: .5s ease;
+    opacity: 0;
+}
+
+#img img{
+    width: 100%;
+}
+
+#c-element:hover #img{
+    opacity: 100;
+    width: 500px;
+}
+#c-element:hover .certified-img{  
+    transform: translateX(-100%);
+}
+
+
+.certified-text {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    height: 100%;
 }
