@@ -9,9 +9,9 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 20px;
   padding: 20px;
   justify-content: center;
+  gap: 20px;
 }
 
 .wrapper-project {
@@ -19,16 +19,11 @@
   flex-direction: column;
   position: relative;
   overflow: hidden;
-  background-image: linear-gradient(
-    rgba(255, 255, 255, 0.5),
-    rgba(32, 3, 248, 0.5)
-  );
   padding: 20px;
-  border-radius: 20px;
   box-sizing: border-box;
   max-width: 500px;
+  border-radius: 5px;
 }
-
 #projects > div > div {
   display: flex;
   flex-direction: column;

@@ -42,7 +42,7 @@
     gap: 8px;
     padding: 10px;
     position: relative;
-    background-image: linear-gradient(to right, var(--warm), var(--deep), rgba(255, 255, 255, 0.1));
+    background-image: linear-gradient(to right, var(--deep), var(--deep), rgba(255, 255, 255, 0.1));
     overflow: hidden;
     position: relative;
     color: var(--milk-white);
@@ -63,12 +63,13 @@
 #c-element h2 {
     font-size: 1.2em;
     color: beige;
+    font-weight: 800;
 }
 
 #c-element h3 {
     font-size: 1em;
-    color: rgb(194, 232, 232);
-    font-weight: normal;
+    color: greenyellow;
+    font-weight: 700;
 }
 
 #c-element h4 {
