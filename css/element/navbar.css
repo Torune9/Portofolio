@@ -5,6 +5,7 @@ header {
   position: fixed;
   z-index: 100;
   background-color: var(--milk-white);
+  font-family: var(--roboto);
 }
 
 nav {
